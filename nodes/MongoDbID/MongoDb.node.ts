@@ -11,6 +11,8 @@ import type {
 } from 'n8n-workflow';
 import { NodeOperationError } from 'n8n-workflow';
 
+import {EJSON} from 'bson';
+
 import type {
 	FindOneAndReplaceOptions,
 	FindOneAndUpdateOptions,
@@ -118,7 +120,7 @@ export class MongoDb implements INodeType {
 			// ----------------------------------
 
 			try {
-				const queryParameter = JSON.parse(
+				const queryParameter = EJSON.parse(
 					this.getNodeParameter('query', 0) as string,
 				) as IDataObject;
 
@@ -146,7 +148,7 @@ export class MongoDb implements INodeType {
 			try {
 				const { deletedCount } = await mdb
 					.collection(this.getNodeParameter('collection', 0) as string)
-					.deleteMany(JSON.parse(this.getNodeParameter('query', 0) as string) as Document);
+					.deleteMany(EJSON.parse(this.getNodeParameter('query', 0) as string) as Document);
 
 				responseData = [{ deletedCount }];
 			} catch (error) {
@@ -162,7 +164,7 @@ export class MongoDb implements INodeType {
 			// ----------------------------------
 
 			try {
-				const queryParameter = JSON.parse(
+				const queryParameter = EJSON.parse(
 					this.getNodeParameter('query', 0) as string,
 				) as IDataObject;
 
@@ -177,7 +179,7 @@ export class MongoDb implements INodeType {
 				const options: any = this.getNodeParameter('options', 0);
 				const limit = options.limit as number;
 				const skip = options.skip as number;
-				const sort = options.sort && (JSON.parse(options.sort as string) as Sort);
+				const sort = options.sort && (EJSON.parse(options.sort as string) as Sort);
 				if (skip > 0) {
 					query = query.skip(skip);
 				}
