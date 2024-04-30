@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-mongo-oid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n community node to use mongo and BSON ObjectID",
   "keywords": [
     "n8n-community-node-package"
