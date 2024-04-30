@@ -35,10 +35,10 @@ import {
 
 import type { IMongoParametricCredentials } from './mongoDb.types';
 
-export class MongoDb implements INodeType {
+export class MongoDBOID implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'mongoDBOID',
-		name: 'mongoDBOID',
+		name: 'mongoDboid',
 		icon: 'file:mongodb.svg',
 		group: ['input'],
 		version: 1,

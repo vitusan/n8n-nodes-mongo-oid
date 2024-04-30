@@ -1,12 +1,11 @@
 {
   "name": "n8n-nodes-mongo-oid",
-  "version": "0.2.0",
-  "description": "n8n community node to work with the Digital Ocean API",
+  "version": "1.0.0",
+  "description": "n8n community node to use mongo and BSON ObjectID",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "https://joffcom.net",
   "author": {
     "name": "Leandro",
     "email": "leh.hoff@gmail.com"
@@ -30,7 +29,7 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/MongoDbID/MongoDb.node.js"
+      "dist/nodes/MongoDb/MongoDboid.node.js"
     ]
   },
   "devDependencies": {
