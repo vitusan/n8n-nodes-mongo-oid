@@ -35,16 +35,16 @@ import {
 
 import type { IMongoParametricCredentials } from './mongoDb.types';
 
-export class MongoDBOID implements INodeType {
+export class MongoDb implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'mongoDBOID',
-		name: 'mongoDboid',
+		displayName: 'Mongo DB OID',
+		name: 'mongoDb',
 		icon: 'file:mongodb.svg',
 		group: ['input'],
 		version: 1,
 		description: 'Find, insert and update documents in MongoDB',
 		defaults: {
-			name: 'mongoDBOID',
+			name: 'mongoDb',
 		},
 		inputs: ['main'],
 		outputs: ['main'],

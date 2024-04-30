@@ -29,7 +29,7 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/MongoDb/MongoDboid.node.js"
+      "dist/nodes/MongoDb/MongoDb.node.js"
     ]
   },
   "devDependencies": {
