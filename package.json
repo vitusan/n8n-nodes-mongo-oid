@@ -1,18 +1,18 @@
 {
   "name": "n8n-nodes-mongo-oid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "n8n community node to use mongo and BSON ObjectID",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "author": {
-    "name": "Leandro",
-    "email": "leh.hoff@gmail.com"
+    "name": "Victor",
+    "email": "ovetoro@hotmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lehno/n8n-nodes-mongo-oid.git"
+    "url": "https://github.com/vitusan/n8n-nodes-mongo-oid"
   },
   "main": "index.js",
   "scripts": {
